@@ -42,7 +42,7 @@ body {
 }
 
 .web-title {
-  font-family: "Nasalization";
+  font-family: "Nasalization", sans-serif;
   font-size: 2.8rem;
   margin-top: 15px;
   margin-bottom: 0;
