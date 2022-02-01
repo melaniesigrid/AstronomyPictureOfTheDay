@@ -1,4 +1,4 @@
 import './style.css';
-import { getPictures } from './getRequest.js'
+import { createCards } from './cards.js';
 
-window.onload = getPictures;
+window.onload = createCards;
