@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Nasalization";
-  src: url(./nasalization-cufonfonts-webfont/nasalization\ rg.woff);
+  src: url(./assets/nasalization-cufonfonts-webfont/nasalization\ rg.woff);
 }
 
 @font-face {
   font-family: "Helvetica";
-  src: url(./Helvetica-Font/Helvetica.ttf) format("truetype");
+  src: url(./assets/Helvetica-Font/Helvetica.ttf) format("truetype");
 }
 
 body {
