@@ -109,3 +109,22 @@ footer {
 section {
   margin-bottom: 300px;
 }
+
+header {
+  padding: 20px;
+}
+
+header img {
+  width: 120px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 20px;
+}
