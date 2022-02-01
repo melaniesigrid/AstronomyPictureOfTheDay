@@ -110,7 +110,7 @@ footer {
   border-top: 3px solid #be9ce7;
 }
 
-.bottom-decoration>.bars {
+.bottom-decoration > .bars {
   font-size: 1.9rem;
   padding-right: 10px;
   margin: 3px;
