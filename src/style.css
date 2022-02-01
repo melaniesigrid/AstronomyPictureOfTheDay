@@ -107,24 +107,35 @@ footer {
 }
 
 section {
-  margin-bottom: 300px;
+  margin-bottom: 200px;
 }
 
 header {
-  padding: 20px;
-}
-
-header img {
-  width: 120px;
-}
-
-nav ul {
+  padding: 20px 80px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header i {
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.3rem;
 }
 
 nav ul li {
   list-style-type: none;
   display: inline;
-  padding: 0 20px;
+  padding: 0 30px;
+  font-size: 1.3rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+.active-tab {
+  color: rgb(255, 208, 0);
 }
