@@ -95,6 +95,12 @@ header {
   overflow-y: auto;
 }
 
+.title {
+  text-align: center;
+  font-family: "Nasalization";
+  font-size: 2.5rem;
+}
+
 footer {
   grid-area: footer;
   border: 3px solid #be9ce7;
