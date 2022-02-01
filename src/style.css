@@ -1,6 +1,5 @@
 @font-face {
   font-family: "Nasalization";
-  /* stylelint-disable */
   src: url(./nasalization-cufonfonts-webfont/nasalization\ rg.woff);
 }
 
@@ -8,8 +7,6 @@
   font-family: "Helvetica";
   src: url(./Helvetica-Font/Helvetica.ttf) format("truetype");
 }
-
-/* stylelint-enable */
 
 body {
   margin: 0;
