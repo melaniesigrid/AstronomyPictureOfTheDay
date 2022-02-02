@@ -1,4 +1,5 @@
 import getPictures from './GetRequest';
+import postLike from './involvementApp'
 
 const itemGrid = document.querySelector('.item-grid');
 
@@ -35,7 +36,12 @@ const createCards = async () => {
 
     const love = document.createElement('i');
     love.classList.add('fas', 'fa-heart');
+    love.setAttribute('index', `${i}`);
     likesContainer.appendChild(love);
+    
+    love.addEventListener('click', async () => {
+      await postLike(`picture-${i}`);
+    })
 
     const likes = document.createElement('p');
     likes.classList.add('like-number');
