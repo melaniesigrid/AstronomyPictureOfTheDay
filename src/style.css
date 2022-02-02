@@ -28,10 +28,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #be9ce7;
-}
-
 .app-container {
   width: 100%;
   height: 100vh;
@@ -200,7 +196,7 @@ header {
   color: white;
   background-color: #1b1a27;
   border: 3px solid white;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -208,6 +204,7 @@ header {
 .comment-btn:hover {
   color: #be9ce7;
   border-color: #be9ce7;
+  cursor: pointer;
 }
 
 .fa-heart {
@@ -217,11 +214,7 @@ header {
 
 .fa-heart:hover {
   cursor: pointer;
-  color:#eb3f5e;
-}
-
-.comment-btn:hover {
-  cursor: pointer;
+  color: #eb3f5e;
 }
 
 footer {
@@ -277,6 +270,10 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
+}
+
+a:hover {
+  color: #be9ce7;
 }
 
 .active-tab {
