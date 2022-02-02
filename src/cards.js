@@ -1,6 +1,4 @@
-import {
-  getPictures,
-} from './getRequest.js';
+import getPictures from './GetRequest'
 
 const itemGrid = document.querySelector('.item-grid');
 
@@ -28,7 +26,7 @@ const createCards = async () => {
     const cardTitle = document.createElement('h3');
     cardTitle.textContent = item.title;
     cardTitle.classList.add('card-title');
-    
+
     const contentContainer = document.createElement('div');
     contentContainer.classList.add('content-container');
 
@@ -43,13 +41,13 @@ const createCards = async () => {
     likes.classList.add('like-number');
     likes.textContent = '5 likes';
     likesContainer.appendChild(likes);
-    
+
     const comment = document.createElement('button');
     comment.classList.add('comment-btn');
     comment.type = 'button';
     comment.setAttribute('index', `${i}`);
     comment.innerText = 'Comments';
-    
+
     titleContainer.appendChild(cardTitle);
     titleContainer.appendChild(contentContainer);
     contentContainer.appendChild(likesContainer);
@@ -62,4 +60,4 @@ const createCards = async () => {
   });
 };
 
-export { createCards };
+export { createCards as default };
