@@ -26,9 +26,12 @@ const createCards = async () => {
     const titleContainer = document.createElement('div');
     titleContainer.classList.add('title-container');
 
-    const cardTitle = document.createElement('H3');
+    const cardTitle = document.createElement('h3');
     cardTitle.textContent = item.title;
     cardTitle.classList.add('card-title');
+    
+    const contentContainer = document.createElement('div');
+    contentContainer.classList.add('content-container');
 
     const likesContainer = document.createElement('div');
     likesContainer.classList.add('likes-container');
@@ -39,20 +42,21 @@ const createCards = async () => {
 
     const likes = document.createElement('p');
     likes.classList.add('like-number');
-    likesContainer.appendChild(likes);
     likes.textContent = '5 likes';
-
-    titleContainer.appendChild(cardTitle);
-    titleContainer.appendChild(likesContainer)
-    card.appendChild(titleContainer);
-
+    likesContainer.appendChild(likes);
+    
     const comment = document.createElement('button');
     comment.classList.add('comment-btn');
     comment.type = 'button';
     comment.setAttribute('index', `${i}`);
     comment.innerText = 'Comments';
-    card.appendChild(comment);
     
+    titleContainer.appendChild(cardTitle);
+    titleContainer.appendChild(contentContainer);
+    contentContainer.appendChild(likesContainer);
+    contentContainer.appendChild(comment);
+    card.appendChild(titleContainer);
+
     card.setAttribute('index', `${i}`);
 
     itemGrid.appendChild(card);

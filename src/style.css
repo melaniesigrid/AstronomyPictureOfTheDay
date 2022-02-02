@@ -14,6 +14,24 @@ body {
   font-family: "Helvetica", sans-serif;
 }
 
+::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #be9ce7;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #be9ce7;
+}
+
 .app-container {
   width: 100%;
   height: 100vh;
@@ -43,8 +61,8 @@ body {
 
 .web-title {
   font-family: "Nasalization", sans-serif;
-  font-size: 4rem;
-  margin-top: 15px;
+  font-size: 2.7rem;
+  margin-top: 1vh;
   margin-bottom: 0;
   color: #eb3f5e;
 }
@@ -54,18 +72,18 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 5px 30px;
+  padding: 0 30px;
 }
 
 .browser-navigation img {
   width: auto;
-  height: 60px;
+  height: 43px;
 }
 
 .address-bar {
   text-align: left;
   box-sizing: border-box;
-  margin: 15px;
+  margin-bottom: 1vh;
   padding: 8px;
   width: 60vw;
   height: 40px;
@@ -81,9 +99,9 @@ body {
 }
 
 header {
-  background-color: #1b1a27;
+  background-color: transparent;
   grid-area: header;
-  padding: 20px 80px;
+  padding: 5px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,19 +111,124 @@ header {
   background-color: #1b1a27;
   grid-area: main;
   overflow-y: auto;
+  margin: 0 5vw;
 }
 
 .title {
   text-align: center;
-  font-family: "Nasalization";
+  font-family: "Nasalization", sans-serif;
   font-size: 2.5rem;
+  margin-bottom: 3vw;
+}
+
+.title-link {
+  text-decoration: none;
+}
+
+.title-link:hover {
+  color: #be9ce7;
+  cursor: pointer;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid white;
+  border-radius: 15px;
+  width: 25vw;
+  margin-bottom: 8vh;
+}
+
+.card:hover {
+  border-color: #be9ce7;
+}
+
+.picture {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 15px;
+  margin-top: 5vh;
+}
+
+.picture:hover {
+  cursor: pointer;
+}
+
+.video {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 15px;
+  margin-top: 5vh;
+}
+
+.title-container {
+  width: 18vw;
+  text-align: center;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 1.4rem;
+}
+
+.card-title:hover {
+  color: #be9ce7;
+  cursor: pointer;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 18vw;
+  margin-bottom: 3vh;
+}
+
+.likes-container {
+  display: flex;
+  align-items: center;
+}
+
+.comment-btn {
+  color: white;
+  background-color: #1b1a27;
+  border: 3px solid white;
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.comment-btn:hover {
+  color: #be9ce7;
+  border-color: #be9ce7;
+}
+
+.fa-heart {
+  margin-right: 15px;
+  font-size: 1.3rem;
+}
+
+.fa-heart:hover {
+  cursor: pointer;
+  color:#eb3f5e;
+}
+
+.comment-btn:hover {
+  cursor: pointer;
 }
 
 footer {
   grid-area: footer;
   border: 3px solid #be9ce7;
   height: 50px;
-  margin: 0 20px 20px 20px;
+  margin: 15px 20px 15px 20px;
   padding-left: 20px;
   background-color: #1b1a27;
 }
@@ -138,18 +261,18 @@ section {
 
 header i {
   color: #f59259;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 header p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 nav ul li {
   list-style-type: none;
   display: inline;
   padding: 0 30px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 nav ul li a {

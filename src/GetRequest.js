@@ -1,7 +1,7 @@
 import { key } from './configuration.js';
 
 const url = 'https://api.nasa.gov/planetary/apod?api_key=';
-const startDate = '&start_date=2022-01-26';
+const startDate = '&start_date=2022-01-24';
 const endDate = '&end_date=2022-02-01';
 
 const getPictures = async () => {
