@@ -1,23 +1,22 @@
 import {
-  getPictures
-} from './getRequest.js'
+  getPictures,
+} from './getRequest.js';
 
 const itemGrid = document.querySelector('.item-grid');
 
 const createCards = async () => {
   const myPictures = await getPictures();
   myPictures.forEach((item, i) => {
-    console.log(item.media_type);
     const card = document.createElement('div');
     card.classList.add('card');
 
     if (item.media_type === 'image') {
-      let media = document.createElement('img');
+      const media = document.createElement('img');
       media.classList.add('picture');
       media.src = item.url;
       card.appendChild(media);
     } else {
-      let media = document.createElement('iframe');
+      const media = document.createElement('iframe');
       media.classList.add('video');
       media.src = item.url;
       card.appendChild(media);
