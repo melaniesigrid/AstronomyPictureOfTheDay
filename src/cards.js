@@ -1,4 +1,4 @@
-import getPictures from './GetRequest'
+import getPictures from './GetRequest';
 
 const itemGrid = document.querySelector('.item-grid');
 
