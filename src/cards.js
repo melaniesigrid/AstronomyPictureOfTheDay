@@ -1,5 +1,8 @@
 import getPictures from './GetRequest';
-import postLike from './involvementApp';
+import {
+  postLike,
+  getLikes,
+} from './involvementApp';
 
 const itemGrid = document.querySelector('.item-grid');
 
@@ -39,13 +42,26 @@ const createCards = async () => {
     love.setAttribute('index', `${i}`);
     likesContainer.appendChild(love);
 
+    const likes = document.createElement('p');
+    likes.textContent = '0 likes';
+
+    const likeNumber = async () => {
+      const itemLikes = await getLikes();
+      itemLikes.forEach((like) => {
+        if (like.item_id === `picture-${i}`) {
+          likes.textContent = '';
+          likes.classList.add('like-number');
+          likes.textContent = `${like.likes} likes`;
+        }
+      });
+    };
+
     love.addEventListener('click', async () => {
       await postLike(`picture-${i}`);
+      likeNumber();
     });
 
-    const likes = document.createElement('p');
-    likes.classList.add('like-number');
-    likes.textContent = '5 likes';
+    likeNumber();
     likesContainer.appendChild(likes);
 
     const comment = document.createElement('button');
@@ -66,4 +82,7 @@ const createCards = async () => {
   });
 };
 
-export { createCards as default };
+export {
+  createCards as
+  default,
+};

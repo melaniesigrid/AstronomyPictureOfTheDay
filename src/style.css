@@ -150,6 +150,7 @@ header {
   width: 20vw;
   height: 20vw;
   border-radius: 15px;
+  object-fit: cover;
   margin-top: 5vh;
 }
 
