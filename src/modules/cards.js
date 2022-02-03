@@ -3,6 +3,7 @@ import {
   postLike,
   getLikes,
 } from './involvementApp';
+import showCommentCard from './showComments'
 import countCards from './count';
 
 const itemGrid = document.querySelector('.item-grid');
@@ -70,6 +71,10 @@ const createCards = async () => {
     comment.type = 'button';
     comment.setAttribute('index', `${i}`);
     comment.innerText = 'Comments';
+    
+    comment.addEventListener('click', async (i) => {
+      showCommentCard(i);
+    })
 
     titleContainer.appendChild(cardTitle);
     titleContainer.appendChild(contentContainer);

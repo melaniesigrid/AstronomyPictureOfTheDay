@@ -1,0 +1,113 @@
+.comment-card {
+  width: 70%;
+  margin: 0 auto;
+  border: 4px solid #be9ce7;
+  background-color: #111624;
+}
+
+.close-icon {
+  float: right;
+  margin: 10px 20px;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.close-icon i:hover {
+  color: red;
+  font-size: 5.2rem;
+  margin: -5px;
+  transition: 0.8s;
+}
+
+.main-description {
+  padding: 80px 130px;
+}
+
+.mediaImage {
+  width: 100%;
+}
+
+/* .mediaVideo {
+} */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.image-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.image-explanation {
+  font-style: italic;
+}
+
+.copyright {
+  text-decoration: underline;
+}
+
+.image-date {
+  float: right;
+}
+
+.comment-card h2 {
+  text-align: center;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.name-input {
+  outline: none;
+  color: #111624;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  background-color: snow;
+}
+
+.comment-input {
+  width: 100%;
+  height: 150px;
+  outline: none;
+  padding: 10px;
+  color: #111624;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+  margin: 25px 0;
+  box-sizing: border-box;
+  background-color: snow;
+}
+
+form button {
+  width: 100%;
+  background-color: #3ac4;
+  border: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-message {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: black;
+  width: 200px;
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
