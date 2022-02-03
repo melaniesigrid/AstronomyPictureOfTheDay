@@ -1,8 +1,6 @@
 import getPictures from './GetRequest';
-import {
-  postLike,
-  getLikes,
-} from './involvementApp';
+import { postLike, getLikes } from './involvementApp';
+import showCommentCard from './showComments'; // eslint-disable-line import/no-cycle
 import countCards from './count';
 
 const itemGrid = document.querySelector('.item-grid');
@@ -69,7 +67,13 @@ const createCards = async () => {
     comment.classList.add('comment-btn');
     comment.type = 'button';
     comment.setAttribute('index', `${i}`);
+    comment.setAttribute('title', `${item.title}`);
     comment.innerText = 'Comments';
+
+    comment.addEventListener('click', async () => {
+      itemGrid.innerHTML = '';
+      showCommentCard(item.title);
+    });
 
     titleContainer.appendChild(cardTitle);
     titleContainer.appendChild(contentContainer);
@@ -86,7 +90,4 @@ const createCards = async () => {
   counter.textContent = countCards();
 };
 
-export {
-  createCards as
-  default,
-};
+export { createCards as default };
