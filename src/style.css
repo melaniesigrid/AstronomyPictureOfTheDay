@@ -104,7 +104,6 @@ header {
 }
 
 .content {
-  background-color: #1b1a27;
   grid-area: main;
   overflow-y: auto;
   margin: 0 5vw;
