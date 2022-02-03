@@ -1,14 +1,14 @@
 import getPictures from './GetRequest';
-import createCards from './cards';
+import createCards from './cards'; // eslint-disable-line import/no-cycle
 
 const showCommentCard = async (title) => {
   const myPicturesJson = await getPictures();
   const stringifiedJson = JSON.stringify(myPicturesJson);
   const myPictures = JSON.parse(stringifiedJson);
-  console.log(myPictures.length);
-  console.log(myPictures);
 
-  myPictures.forEach(element => {
+
+
+  myPictures.forEach((element) => {
     if (element.title === title) {
       const commentModel = document.querySelector('.comment-model');
       const commentCard = document.createElement('div');
@@ -35,7 +35,7 @@ const showCommentCard = async (title) => {
         mainDescription.appendChild(media);
       } else {
         const media = document.createElement('iframe');
-        media.classList.add('mediaVideo')
+        media.classList.add('mediaVideo');
         media.src = element.url;
         mainDescription.appendChild(media);
       }
@@ -50,7 +50,7 @@ const showCommentCard = async (title) => {
       const extraExplanation = document.createElement('p');
       const copyright = document.createElement('span');
       copyright.classList.add('copyright');
-      copyright.innerText = `By ${element.copyright}`
+      copyright.innerText = `By ${element.copyright}`;
 
       const imageDate = document.createElement('span');
       imageDate.classList.add('image-date');
@@ -95,11 +95,11 @@ const showCommentCard = async (title) => {
           <button type="submit">Comment</button>
           `;
 
-      mainDescription.append(h1, explanation, extraExplanation, h2, commentContainer, commentTitle, form);
+      mainDescription.append(h1, explanation, extraExplanation, h2, commentContainer, commentTitle, form); // eslint-disable-line max-len
       commentCard.append(closeIcon, mainDescription);
       commentModel.appendChild(commentCard);
     }
-  })
+  });
 };
 
 export { showCommentCard as default };
