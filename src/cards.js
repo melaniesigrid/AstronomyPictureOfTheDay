@@ -41,6 +41,9 @@ const createCards = async () => {
     love.classList.add('fas', 'fa-heart');
     love.setAttribute('index', `${i}`);
     likesContainer.appendChild(love);
+    
+    const likes = document.createElement('p');
+    likes.textContent = '0 likes';
 
     const likeNumber = async () => {
       const itemLikes = await getLikes();
@@ -57,9 +60,6 @@ const createCards = async () => {
       await postLike(`picture-${i}`);
       likeNumber();
     });
-
-    const likes = document.createElement('p');
-    likes.textContent = '0 likes';
 
     likeNumber();
     likesContainer.appendChild(likes);
