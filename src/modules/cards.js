@@ -70,10 +70,11 @@ const createCards = async () => {
     comment.classList.add('comment-btn');
     comment.type = 'button';
     comment.setAttribute('index', `${i}`);
+    comment.setAttribute('title', `${item.title}`);
     comment.innerText = 'Comments';
     
     comment.addEventListener('click', async (i) => {
-      showCommentCard(i);
+      showCommentCard(item.title);
     })
 
     titleContainer.appendChild(cardTitle);
