@@ -2,7 +2,6 @@ import getPictures from './GetRequest';
 
 const showCommentCard = async (title) => {
   const myPicturesJson = await getPictures();
-  // console.log(myPicturesJson);
   const stringifiedJson = JSON.stringify(myPicturesJson);
   const myPictures = JSON.parse(stringifiedJson);
   console.log(myPictures.length);
@@ -49,16 +48,16 @@ const showCommentCard = async (title) => {
 
       const imageDate = document.createElement('span');
       imageDate.classList.add('image-date');
-      imageDate.innerText = `${element.date};`
-      extraExplanation.appendChild(copyright, imageDate);
+      imageDate.innerText = `${element.date}`;
+      extraExplanation.append(copyright, imageDate);
 
       const h2 = document.createElement('h2');
       h2.innerText = 'Comments (';
       const commentCounter = document.createElement('span');
       commentCounter.classList.add('comment-counter');
-      imageDate.innerText = '3';
+      commentCounter.innerText = '3';
       const bracket = document.createTextNode(')');
-      h2.appendChild(commentCounter, bracket);
+      h2.append(commentCounter, bracket);
 
       const commentContainer = document.createElement('ul');
       commentContainer.classList.add('comment-container');
@@ -90,8 +89,8 @@ const showCommentCard = async (title) => {
           <button type="submit">Comment</button>
           `;
 
-      mainDescription.appendChild(h1, explanation, extraExplanation, h2, commentContainer, commentTitle, form);
-      commentCard.appendChild(closeIcon, mainDescription);
+      mainDescription.append(h1, explanation, extraExplanation, h2, commentContainer, commentTitle, form);
+      commentCard.append(closeIcon, mainDescription);
       commentModel.appendChild(commentCard);
     }
   })
