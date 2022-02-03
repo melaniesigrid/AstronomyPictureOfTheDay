@@ -146,7 +146,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ countCards)\n/* harmony export */ });\nconst countCards = () => {\r\n  const myArray = document.querySelectorAll('.card');\r\n  const count = myArray.length;\r\n  return count;\r\n}\r\n\r\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/count.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ countCards)\n/* harmony export */ });\nconst countCards = () => {\r\n  const myArray = document.querySelectorAll('.card');\r\n  const count = myArray.length;\r\n  return count;\r\n};\r\n\r\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/count.js?");
 
 /***/ }),
 
