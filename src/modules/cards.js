@@ -72,8 +72,9 @@ const createCards = async () => {
     comment.setAttribute('index', `${i}`);
     comment.setAttribute('title', `${item.title}`);
     comment.innerText = 'Comments';
-    
+
     comment.addEventListener('click', async (i) => {
+      itemGrid.innerHTML = '';
       showCommentCard(item.title);
     })
 
@@ -92,7 +93,4 @@ const createCards = async () => {
   counter.textContent = countCards();
 };
 
-export {
-  createCards as
-  default,
-};
+export { createCards as default };

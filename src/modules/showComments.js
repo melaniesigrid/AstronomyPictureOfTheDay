@@ -1,4 +1,5 @@
 import getPictures from './GetRequest';
+import createCards from './cards';
 
 const showCommentCard = async (title) => {
   const myPicturesJson = await getPictures();
@@ -18,6 +19,11 @@ const showCommentCard = async (title) => {
       const icon = document.createElement('i');
       icon.classList.add('fas', 'fa-times');
       closeIcon.appendChild(icon);
+
+      closeIcon.addEventListener('click', () => {
+        createCards();
+        commentModel.innerHTML = '';
+      });
 
       const mainDescription = document.createElement('div');
       mainDescription.classList.add('main-description');
