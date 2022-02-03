@@ -1,4 +1,4 @@
-import countCards from '../modules/count.js';
+import countCards from '../modules/count';
 
 test('counts card elements', () => {
   /**

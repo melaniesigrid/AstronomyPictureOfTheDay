@@ -120,53 +120,53 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/GetRequest.js":
-/*!***************************!*\
-  !*** ./src/GetRequest.js ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ getPictures)\n/* harmony export */ });\nconst url = 'https://api.nasa.gov/planetary/apod?api_key=';\r\nconst key = 'j9gWflgyCduUULTGmKMfahoaNAbzAULMkGGuu9jN';\r\nconst startDate = '&start_date=2022-01-25';\r\nconst endDate = '&end_date=2022-02-02';\r\n\r\nconst getPictures = async () => {\r\n  const response = await fetch(`${url}${key}${startDate}${endDate}`);\r\n  const answer = await response.json();\r\n  return answer;\r\n};\r\n\r\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/GetRequest.js?");
-
-/***/ }),
-
-/***/ "./src/cards.js":
-/*!**********************!*\
-  !*** ./src/cards.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createCards)\n/* harmony export */ });\n/* harmony import */ var _GetRequest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GetRequest */ \"./src/GetRequest.js\");\n/* harmony import */ var _involvementApp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./involvementApp */ \"./src/involvementApp.js\");\n/* harmony import */ var _count__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./count */ \"./src/count.js\");\n\r\n\r\n\r\n\r\nconst itemGrid = document.querySelector('.item-grid');\r\n\r\nconst createCards = async () => {\r\n  const myPictures = await (0,_GetRequest__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n  myPictures.forEach((item, i) => {\r\n    const card = document.createElement('div');\r\n    card.classList.add('card');\r\n\r\n    if (item.media_type === 'image') {\r\n      const media = document.createElement('img');\r\n      media.classList.add('picture');\r\n      media.src = item.url;\r\n      card.appendChild(media);\r\n    } else {\r\n      const media = document.createElement('iframe');\r\n      media.classList.add('video');\r\n      media.src = item.url;\r\n      card.appendChild(media);\r\n    }\r\n\r\n    const titleContainer = document.createElement('div');\r\n    titleContainer.classList.add('title-container');\r\n\r\n    const cardTitle = document.createElement('h3');\r\n    cardTitle.textContent = item.title;\r\n    cardTitle.classList.add('card-title');\r\n\r\n    const contentContainer = document.createElement('div');\r\n    contentContainer.classList.add('content-container');\r\n\r\n    const likesContainer = document.createElement('div');\r\n    likesContainer.classList.add('likes-container');\r\n\r\n    const love = document.createElement('i');\r\n    love.classList.add('fas', 'fa-heart');\r\n    love.setAttribute('index', `${i}`);\r\n    likesContainer.appendChild(love);\r\n\r\n    const likes = document.createElement('p');\r\n    likes.textContent = '0 likes';\r\n\r\n    const likeNumber = async () => {\r\n      const itemLikes = await (0,_involvementApp__WEBPACK_IMPORTED_MODULE_1__.getLikes)();\r\n      itemLikes.forEach((like) => {\r\n        if (like.item_id === `picture-${i}`) {\r\n          likes.textContent = '';\r\n          likes.classList.add('like-number');\r\n          likes.textContent = `${like.likes} likes`;\r\n        }\r\n      });\r\n    };\r\n\r\n    love.addEventListener('click', async () => {\r\n      await (0,_involvementApp__WEBPACK_IMPORTED_MODULE_1__.postLike)(`picture-${i}`);\r\n      likeNumber();\r\n    });\r\n\r\n    likeNumber();\r\n    likesContainer.appendChild(likes);\r\n\r\n    const comment = document.createElement('button');\r\n    comment.classList.add('comment-btn');\r\n    comment.type = 'button';\r\n    comment.setAttribute('index', `${i}`);\r\n    comment.innerText = 'Comments';\r\n\r\n    titleContainer.appendChild(cardTitle);\r\n    titleContainer.appendChild(contentContainer);\r\n    contentContainer.appendChild(likesContainer);\r\n    contentContainer.appendChild(comment);\r\n    card.appendChild(titleContainer);\r\n\r\n    card.setAttribute('index', `${i}`);\r\n\r\n    itemGrid.appendChild(card);\r\n  });\r\n\r\n  const counter = document.getElementById('picture-counter');\r\n  counter.textContent = (0,_count__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n};\r\n\r\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/cards.js?");
-
-/***/ }),
-
-/***/ "./src/count.js":
-/*!**********************!*\
-  !*** ./src/count.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ countCards)\n/* harmony export */ });\nconst countCards = () => {\r\n  const myArray = document.querySelectorAll('.card');\r\n  const count = myArray.length;\r\n  return count;\r\n};\r\n\r\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/count.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _cards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cards */ \"./src/cards.js\");\n\r\n\r\n\r\nwindow.onload = (0,_cards__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_cards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cards */ \"./src/modules/cards.js\");\n\r\n\r\n\r\nwindow.onload = (0,_modules_cards__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/involvementApp.js":
-/*!*******************************!*\
-  !*** ./src/involvementApp.js ***!
-  \*******************************/
+/***/ "./src/modules/GetRequest.js":
+/*!***********************************!*\
+  !*** ./src/modules/GetRequest.js ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"postLike\": () => (/* binding */ postLike),\n/* harmony export */   \"getLikes\": () => (/* binding */ getLikes)\n/* harmony export */ });\nconst postLike = async (itemId) => {\r\n  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PXvVn75NsImDnwHgqLa4/likes/', {\r\n    method: 'POST',\r\n    body: JSON.stringify({\r\n      item_id: itemId,\r\n    }),\r\n    headers: {\r\n      'Content-Type': 'application/json; charset=UTF-8',\r\n    },\r\n  });\r\n  return response.text();\r\n};\r\n\r\nconst getLikes = async () => {\r\n  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PXvVn75NsImDnwHgqLa4/likes/');\r\n  const data = await response.json();\r\n  return data;\r\n};\r\n\r\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/involvementApp.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ getPictures)\n/* harmony export */ });\nconst url = 'https://api.nasa.gov/planetary/apod?api_key=';\r\nconst key = 'j9gWflgyCduUULTGmKMfahoaNAbzAULMkGGuu9jN';\r\nconst startDate = '&start_date=2022-01-25';\r\nconst endDate = '&end_date=2022-02-02';\r\n\r\nconst getPictures = async () => {\r\n  const response = await fetch(`${url}${key}${startDate}${endDate}`);\r\n  const answer = await response.json();\r\n  return answer;\r\n};\r\n\r\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/modules/GetRequest.js?");
+
+/***/ }),
+
+/***/ "./src/modules/cards.js":
+/*!******************************!*\
+  !*** ./src/modules/cards.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createCards)\n/* harmony export */ });\n/* harmony import */ var _GetRequest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GetRequest */ \"./src/modules/GetRequest.js\");\n/* harmony import */ var _involvementApp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./involvementApp */ \"./src/modules/involvementApp.js\");\n/* harmony import */ var _count__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./count */ \"./src/modules/count.js\");\n\r\n\r\n\r\n\r\nconst itemGrid = document.querySelector('.item-grid');\r\n\r\nconst createCards = async () => {\r\n  const myPictures = await (0,_GetRequest__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n  myPictures.forEach((item, i) => {\r\n    const card = document.createElement('div');\r\n    card.classList.add('card');\r\n\r\n    if (item.media_type === 'image') {\r\n      const media = document.createElement('img');\r\n      media.classList.add('picture');\r\n      media.src = item.url;\r\n      card.appendChild(media);\r\n    } else {\r\n      const media = document.createElement('iframe');\r\n      media.classList.add('video');\r\n      media.src = item.url;\r\n      card.appendChild(media);\r\n    }\r\n\r\n    const titleContainer = document.createElement('div');\r\n    titleContainer.classList.add('title-container');\r\n\r\n    const cardTitle = document.createElement('h3');\r\n    cardTitle.textContent = item.title;\r\n    cardTitle.classList.add('card-title');\r\n\r\n    const contentContainer = document.createElement('div');\r\n    contentContainer.classList.add('content-container');\r\n\r\n    const likesContainer = document.createElement('div');\r\n    likesContainer.classList.add('likes-container');\r\n\r\n    const love = document.createElement('i');\r\n    love.classList.add('fas', 'fa-heart');\r\n    love.setAttribute('index', `${i}`);\r\n    likesContainer.appendChild(love);\r\n\r\n    const likes = document.createElement('p');\r\n    likes.textContent = '0 likes';\r\n\r\n    const likeNumber = async () => {\r\n      const itemLikes = await (0,_involvementApp__WEBPACK_IMPORTED_MODULE_1__.getLikes)();\r\n      itemLikes.forEach((like) => {\r\n        if (like.item_id === `picture-${i}`) {\r\n          likes.textContent = '';\r\n          likes.classList.add('like-number');\r\n          likes.textContent = `${like.likes} likes`;\r\n        }\r\n      });\r\n    };\r\n\r\n    love.addEventListener('click', async () => {\r\n      await (0,_involvementApp__WEBPACK_IMPORTED_MODULE_1__.postLike)(`picture-${i}`);\r\n      likeNumber();\r\n    });\r\n\r\n    likeNumber();\r\n    likesContainer.appendChild(likes);\r\n\r\n    const comment = document.createElement('button');\r\n    comment.classList.add('comment-btn');\r\n    comment.type = 'button';\r\n    comment.setAttribute('index', `${i}`);\r\n    comment.innerText = 'Comments';\r\n\r\n    titleContainer.appendChild(cardTitle);\r\n    titleContainer.appendChild(contentContainer);\r\n    contentContainer.appendChild(likesContainer);\r\n    contentContainer.appendChild(comment);\r\n    card.appendChild(titleContainer);\r\n\r\n    card.setAttribute('index', `${i}`);\r\n\r\n    itemGrid.appendChild(card);\r\n  });\r\n\r\n  const counter = document.getElementById('picture-counter');\r\n  counter.textContent = (0,_count__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n};\r\n\r\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/modules/cards.js?");
+
+/***/ }),
+
+/***/ "./src/modules/count.js":
+/*!******************************!*\
+  !*** ./src/modules/count.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst countCards = () => {\r\n  const myArray = document.querySelectorAll('.card');\r\n  const count = myArray.length;\r\n  return count;\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (countCards);\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/modules/count.js?");
+
+/***/ }),
+
+/***/ "./src/modules/involvementApp.js":
+/*!***************************************!*\
+  !*** ./src/modules/involvementApp.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"postLike\": () => (/* binding */ postLike),\n/* harmony export */   \"getLikes\": () => (/* binding */ getLikes)\n/* harmony export */ });\nconst postLike = async (itemId) => {\r\n  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PXvVn75NsImDnwHgqLa4/likes/', {\r\n    method: 'POST',\r\n    body: JSON.stringify({\r\n      item_id: itemId,\r\n    }),\r\n    headers: {\r\n      'Content-Type': 'application/json; charset=UTF-8',\r\n    },\r\n  });\r\n  return response.text();\r\n};\r\n\r\nconst getLikes = async () => {\r\n  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PXvVn75NsImDnwHgqLa4/likes/');\r\n  const data = await response.json();\r\n  return data;\r\n};\r\n\r\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/modules/involvementApp.js?");
 
 /***/ }),
 
