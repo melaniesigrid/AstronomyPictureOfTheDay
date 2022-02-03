@@ -6,8 +6,6 @@ const showCommentCard = async (title) => {
   const stringifiedJson = JSON.stringify(myPicturesJson);
   const myPictures = JSON.parse(stringifiedJson);
 
-
-
   myPictures.forEach((element) => {
     if (element.title === title) {
       const commentModel = document.querySelector('.comment-model');
