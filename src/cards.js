@@ -3,6 +3,7 @@ import {
   postLike,
   getLikes,
 } from './involvementApp';
+import countCards from './count';
 
 const itemGrid = document.querySelector('.item-grid');
 
@@ -80,6 +81,9 @@ const createCards = async () => {
 
     itemGrid.appendChild(card);
   });
+
+  const counter = document.getElementById('picture-counter');
+  counter.textContent = countCards();
 };
 
 export {
