@@ -1,7 +1,7 @@
 import getPictures from './GetRequest';
 import {
   postLike,
-  getLikes
+  getLikes,
 } from './involvementApp';
 
 const itemGrid = document.querySelector('.item-grid');
@@ -42,25 +42,25 @@ const createCards = async () => {
     love.setAttribute('index', `${i}`);
     likesContainer.appendChild(love);
 
-    love.addEventListener('click', async () => {
-      await postLike(`picture-${i}`);
-      likeNumber();
-    });
-    
-    const likes = document.createElement('p');
-    likes.textContent = `0 likes`;
-    
     const likeNumber = async () => {
       const itemLikes = await getLikes();
       itemLikes.forEach((like) => {
-        const counter = document.querySelector('.like-number');
         if (like.item_id === `picture-${i}`) {
           likes.textContent = '';
           likes.classList.add('like-number');
           likes.textContent = `${like.likes} likes`;
-        };
+        }
       });
     };
+
+    love.addEventListener('click', async () => {
+      await postLike(`picture-${i}`);
+      likeNumber();
+    });
+
+    const likes = document.createElement('p');
+    likes.textContent = '0 likes';
+
     likeNumber();
     likesContainer.appendChild(likes);
 
@@ -80,10 +80,9 @@ const createCards = async () => {
 
     itemGrid.appendChild(card);
   });
-  console.log(getLikes());
 };
 
 export {
   createCards as
-  default
+  default,
 };

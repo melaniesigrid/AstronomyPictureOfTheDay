@@ -17,4 +17,4 @@ const getLikes = async () => {
   return data;
 };
 
-  export { postLike, getLikes };
+export { postLike, getLikes, };
