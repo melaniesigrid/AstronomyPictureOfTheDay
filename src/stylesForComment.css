@@ -14,8 +14,7 @@
 
 .close-icon i:hover {
   color: red;
-  font-size: 5.2rem;
-  margin: -5px;
+  transform: scale(1.5);
   transition: 0.8s;
 }
 
