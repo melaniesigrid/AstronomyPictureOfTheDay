@@ -11,7 +11,7 @@
 }
 
 .active {
-  display: block !important;
+  display: block;
 }
 
 .comment-card {

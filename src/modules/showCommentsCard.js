@@ -61,7 +61,7 @@ const showCommentCard = async (title) => {
       const extraExplanation = document.createElement('p');
       const copyright = document.createElement('span');
       copyright.classList.add('copyright');
-      copyright.innerText = `By ${element.copyright ?? 'anonymous'}`;
+      copyright.innerText = `By ${element.copyright ?? 'Anonymous'}`;
 
       const imageDate = document.createElement('span');
       imageDate.classList.add('image-date');
