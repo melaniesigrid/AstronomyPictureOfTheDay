@@ -4,11 +4,11 @@ const getComments = async (item_id) => {
   return data;
 };
 
-const addComments = async (item_id, username, comment) => {
+const addComments = async (username, comment, itemID) => {
   const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PXvVn75NsImDnwHgqLa4/comments', {
     method: 'POST',
     body: JSON.stringify({
-      item_id: item_id,
+      item_id: itemID,
       username,
       comment,
     }),
