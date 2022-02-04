@@ -26,16 +26,7 @@ const showCommentCard = async (title) => {
         commentModel.innerHTML = '';
       };
 
-      const commentClick = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        return false;
-      };
-
-      commentModel.addEventListener('click', closeClick);
       closeIcon.addEventListener('click', closeClick);
-      commentCard.addEventListener('click', commentClick);
 
       const mainDescription = document.createElement('div');
       mainDescription.classList.add('main-description');
@@ -106,6 +97,9 @@ const showCommentCard = async (title) => {
         await displayComments(userID);
 
         form.reset();
+
+        const counter = document.querySelector('.comment-counter');
+        counter.textContent = countComments();
       });
     }
   });
