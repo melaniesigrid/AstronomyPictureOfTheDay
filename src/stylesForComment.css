@@ -1,6 +1,22 @@
+.comment-model {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+.active {
+  display: block !important;
+}
+
 .comment-card {
   width: 70%;
-  margin: 0 auto;
+  margin: 3rem auto;
   border: 4px solid #be9ce7;
   background-color: #111624;
   border-radius: 15px;
@@ -99,6 +115,10 @@ form button {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+form button:hover {
+  background-color: rgba(64, 214, 255, 0.527);
 }
 
 .comment-message {

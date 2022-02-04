@@ -1,5 +1,4 @@
 import getPictures from './GetRequest';
-import createCards from './cards'; // eslint-disable-line import/no-cycle
 import displayComments from './comments';
 import { addComments } from './APIcomments';
 
@@ -20,12 +19,23 @@ const showCommentCard = async (title) => {
       const icon = document.createElement('i');
       icon.classList.add('fas', 'fa-times');
       closeIcon.appendChild(icon);
-
-      closeIcon.addEventListener('click', () => {
-        createCards();
-        commentModel.innerHTML = '';
-      });
-
+    
+      const closeClick = () => {
+        commentModel.classList.remove('active');
+        commentModel.innerHTML = ''; 
+      }
+      
+      const commentClick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        return false;
+      }
+      
+      commentModel.addEventListener('click', closeClick);
+      closeIcon.addEventListener('click', closeClick);
+      commentCard.addEventListener('click', commentClick);
+      
       const mainDescription = document.createElement('div');
       mainDescription.classList.add('main-description');
 
@@ -51,7 +61,7 @@ const showCommentCard = async (title) => {
       const extraExplanation = document.createElement('p');
       const copyright = document.createElement('span');
       copyright.classList.add('copyright');
-      copyright.innerText = `By ${element.copyright}`;
+      copyright.innerText = `By ${element.copyright ?? 'anonymous'}`;
 
       const imageDate = document.createElement('span');
       imageDate.classList.add('image-date');
