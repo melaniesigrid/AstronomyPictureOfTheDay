@@ -1,6 +1,6 @@
 import getPictures from './GetRequest';
 import { postLike, getLikes } from './involvementApp';
-import showCommentCard from './showComments'; // eslint-disable-line import/no-cycle
+import showCommentCard from './showCommentsCard'; // eslint-disable-line import/no-cycle
 import countCards from './count';
 
 const itemGrid = document.querySelector('.item-grid');
@@ -80,9 +80,7 @@ const createCards = async () => {
     contentContainer.appendChild(likesContainer);
     contentContainer.appendChild(comment);
     card.appendChild(titleContainer);
-
     card.setAttribute('index', `${i}`);
-
     itemGrid.appendChild(card);
   });
 
