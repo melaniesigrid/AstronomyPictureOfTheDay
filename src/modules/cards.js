@@ -1,7 +1,8 @@
 import getPictures from './GetRequest';
 import { postLike, getLikes } from './involvementApp';
-import showCommentCard from './showComments'; // eslint-disable-line import/no-cycle
+import showCommentCard from './showCommentsCard'; // eslint-disable-line import/no-cycle
 import countCards from './count';
+import displayComments from './comments'
 
 const itemGrid = document.querySelector('.item-grid');
 
@@ -73,6 +74,7 @@ const createCards = async () => {
     comment.addEventListener('click', async () => {
       itemGrid.innerHTML = '';
       showCommentCard(item.title);
+      displayComments();
     });
 
     titleContainer.appendChild(cardTitle);

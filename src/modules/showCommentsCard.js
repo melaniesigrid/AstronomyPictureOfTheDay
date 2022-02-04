@@ -1,18 +1,20 @@
 import getPictures from './GetRequest';
 import createCards from './cards'; // eslint-disable-line import/no-cycle
+import displayComments from './comments'
 
 const showCommentCard = async (title) => {
   const myPicturesJson = await getPictures();
   const stringifiedJson = JSON.stringify(myPicturesJson);
   const myPictures = JSON.parse(stringifiedJson);
 
-  myPictures.forEach((element) => {
+  myPictures.forEach((element, index) => {
     if (element.title === title) {
       const commentModel = document.querySelector('.comment-model');
       const commentCard = document.createElement('div');
       commentCard.classList.add('comment-card');
-      const closeIcon = document.createElement('div');
+      commentCard.setAttribute('index', index)
 
+      const closeIcon = document.createElement('div');
       closeIcon.classList.add('close-icon');
       const icon = document.createElement('i');
       icon.classList.add('fas', 'fa-times');
@@ -65,23 +67,8 @@ const showCommentCard = async (title) => {
 
       const commentContainer = document.createElement('ul');
       commentContainer.classList.add('comment-container');
-      commentContainer.innerHTML = `
-          <li>
-            <span class="comment-time">2022-01-26</span>,
-            <span class="comment-author">Alex</span>:
-            <span class="comment">that's a great picture, I love it</span>
-          </li>
-          <li>
-            <span class="comment-time">2022-01-26</span>,
-            <span class="comment-author">Alex</span>:
-            <span class="comment">that's a great picture, I love it more</span>
-          </li>
-          <li>
-            <span class="comment-time">2022-01-26</span>,
-            <span class="comment-author">Alex</span>:
-            <span class="comment">that's a great picture, I love it more and more</span>
-          </li>
-          `;
+      // commentContainer.innerHTML =
+
 
       const commentTitle = document.createElement('h2');
       commentTitle.innerText = 'Add a comment';
@@ -93,9 +80,23 @@ const showCommentCard = async (title) => {
           <button type="submit">Comment</button>
           `;
 
+
+
+
       mainDescription.append(h1, explanation, extraExplanation, h2, commentContainer, commentTitle, form); // eslint-disable-line max-len
       commentCard.append(closeIcon, mainDescription);
       commentModel.appendChild(commentCard);
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const username = document.querySelector('.name-input').value;
+        const commentMessage = document.querySelector('.comment-input').value;
+        const userID = commentCard.getAttribute('index');
+
+        // console.log(username, commentMessage, userID);
+        await displayComments(username, commentMessage, userID);
+      });
     }
   });
 };
