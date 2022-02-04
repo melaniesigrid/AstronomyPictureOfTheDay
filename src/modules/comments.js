@@ -7,7 +7,7 @@ const displayComments = async (userID) => {
     const commentContainer = document.querySelector('.comment-container');
 
     const li = document.createElement('li');
-    li.classList.add('single-comment')
+    li.classList.add('single-comment');
     const time = document.createElement('span');
     time.classList.add('comment-time');
     time.innerText = `${comment.creation_date}, `;
