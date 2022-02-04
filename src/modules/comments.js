@@ -3,8 +3,6 @@ import { getComments } from './APIcomments';
 const displayComments = async (userID) => {
   const comments = await getComments(userID);
 
-  // console.log(comments.length);
-
   if (comments.length === undefined) {
     const commentCounter = document.querySelector('.comment-counter');
     commentCounter.innerHTML = 0;

@@ -71,8 +71,9 @@ const createCards = async () => {
     comment.innerText = 'Comments';
 
     comment.addEventListener('click', async () => {
-      itemGrid.innerHTML = '';
-      showCommentCard(item.title);
+      await showCommentCard(item.title);
+      const modal = document.querySelector('.comment-model');
+      modal.classList.add('active');
     });
 
     titleContainer.appendChild(cardTitle);
