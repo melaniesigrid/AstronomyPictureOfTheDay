@@ -1,8 +1,9 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
 # Astronomy Picture of the Day
 
 > A beautiful website that utilizes NASA's API, Astronomy Picture of the Day. You can like your favorite pictures, and comment about your favorites (likes and comments powered by Microverse's Involvement API).
 
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
 ## Built With
 
