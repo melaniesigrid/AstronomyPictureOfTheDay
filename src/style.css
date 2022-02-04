@@ -14,16 +14,6 @@ body {
   font-family: "Helvetica", sans-serif;
 }
 
-::-webkit-scrollbar {
-  border-radius: 10px;
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #be9ce7;
-  border-radius: 10px;
-}
-
 a {
   text-decoration: none;
 }
