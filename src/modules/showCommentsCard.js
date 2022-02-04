@@ -20,27 +20,22 @@ const showCommentCard = async (title) => {
       const icon = document.createElement('i');
       icon.classList.add('fas', 'fa-times');
       closeIcon.appendChild(icon);
-    
+
       const closeClick = () => {
         commentModel.classList.remove('active');
-        commentModel.innerHTML = ''; 
-      }
-      
+        commentModel.innerHTML = '';
+      };
+
       const commentClick = (e) => {
         e.preventDefault();
         e.stopPropagation();
         e.stopImmediatePropagation();
         return false;
-      }
-      
+      };
+
       commentModel.addEventListener('click', closeClick);
       closeIcon.addEventListener('click', closeClick);
       commentCard.addEventListener('click', commentClick);
-
-      closeIcon.addEventListener('click', () => {
-        commentModel.innerHTML = '';
-        createCards();
-      });
 
       const mainDescription = document.createElement('div');
       mainDescription.classList.add('main-description');
