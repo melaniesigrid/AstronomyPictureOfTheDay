@@ -1,5 +1,5 @@
-const getComments = async (item_id) => {
-  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PXvVn75NsImDnwHgqLa4/comments?item_id=${item_id}`);
+const getComments = async (itemId) => {
+  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PXvVn75NsImDnwHgqLa4/comments?item_id=${itemId}`);
   const data = await response.json();
   return data;
 };

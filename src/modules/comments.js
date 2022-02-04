@@ -3,7 +3,7 @@ import { getComments } from './APIcomments';
 const displayComments = async (userID) => {
   const comments = await getComments(userID);
 
-  comments.forEach(comment => {
+  comments.forEach((comment) => {
     const commentContainer = document.querySelector('.comment-container');
 
     const li = document.createElement('li');

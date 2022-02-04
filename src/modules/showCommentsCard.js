@@ -13,7 +13,7 @@ const showCommentCard = async (title) => {
       const commentModel = document.querySelector('.comment-model');
       const commentCard = document.createElement('div');
       commentCard.classList.add('comment-card');
-      commentCard.setAttribute('index', index)
+      commentCard.setAttribute('index', index);
 
       const closeIcon = document.createElement('div');
       closeIcon.classList.add('close-icon');
@@ -96,7 +96,6 @@ const showCommentCard = async (title) => {
 
         form.reset();
       });
-
     }
   });
 
