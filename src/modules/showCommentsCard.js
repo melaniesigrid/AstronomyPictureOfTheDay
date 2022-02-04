@@ -2,6 +2,7 @@ import getPictures from './GetRequest';
 import createCards from './cards'; // eslint-disable-line import/no-cycle
 import displayComments from './comments';
 import { addComments } from './APIcomments';
+import countComments from './countComments';
 
 const showCommentCard = async (title) => {
   const myPicturesJson = await getPictures();
@@ -100,9 +101,11 @@ const showCommentCard = async (title) => {
   });
 
   const commentCard = document.querySelector('.comment-card');
-
   const userID = commentCard.getAttribute('index');
   await displayComments(userID);
+
+  const commentCounter = document.querySelector('.comment-counter');
+  commentCounter.innerHTML = countComments();
 };
 
 export { showCommentCard as default };
