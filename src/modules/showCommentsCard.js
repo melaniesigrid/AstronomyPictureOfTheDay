@@ -1,6 +1,7 @@
 import getPictures from './GetRequest';
 import displayComments from './comments';
 import { addComments } from './APIcomments';
+import countComments from './countComments';
 
 const showCommentCard = async (title) => {
   const myPicturesJson = await getPictures();
@@ -35,7 +36,12 @@ const showCommentCard = async (title) => {
       commentModel.addEventListener('click', closeClick);
       closeIcon.addEventListener('click', closeClick);
       commentCard.addEventListener('click', commentClick);
-      
+
+      closeIcon.addEventListener('click', () => {
+        commentModel.innerHTML = '';
+        createCards();
+      });
+
       const mainDescription = document.createElement('div');
       mainDescription.classList.add('main-description');
 
@@ -110,9 +116,11 @@ const showCommentCard = async (title) => {
   });
 
   const commentCard = document.querySelector('.comment-card');
-
   const userID = commentCard.getAttribute('index');
   await displayComments(userID);
+
+  const commentCounter = document.querySelector('.comment-counter');
+  commentCounter.innerHTML = countComments();
 };
 
 export { showCommentCard as default };
