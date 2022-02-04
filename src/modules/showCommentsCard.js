@@ -23,8 +23,8 @@ const showCommentCard = async (title) => {
       closeIcon.appendChild(icon);
 
       closeIcon.addEventListener('click', () => {
-        createCards();
         commentModel.innerHTML = '';
+        createCards();
       });
 
       const mainDescription = document.createElement('div');
