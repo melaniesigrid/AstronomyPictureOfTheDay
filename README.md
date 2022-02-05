@@ -16,7 +16,9 @@
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://melaniesigrid.github.io/AstronomyPictureOfTheDay/dist/)
+<br>
+[Live video Link](https://youtu.be/kCXQTR1wQN4)
 
 ## Authors
 
