@@ -8,10 +8,11 @@ https://user-images.githubusercontent.com/78875455/152620387-5f63ef5e-2443-4eb9-
 
 ## Built With
 
+- JavaScript
+- Webpack
 - HTML
 - CSS
-- Webpack
-- NASA's Astronomy Picture of the Day
+- NASA's Astronomy Picture of the Day API
 - Microverse's Involvement API
 
 ## Live Demo
@@ -46,7 +47,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to NASA for their amazing open source API, and to code reviewers and partners at Microverse.
+- Hat tip to NASA for their amazing open source API, and to our code reviewers and partners at Microverse.
 
 ## 📝 License
 
