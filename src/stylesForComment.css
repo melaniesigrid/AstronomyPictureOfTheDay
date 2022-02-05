@@ -1,6 +1,5 @@
 .comment-model {
   position: fixed;
-  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -18,6 +17,7 @@
     transform: scale(1);
     opacity: 1;
   }
+
   to {
     z-index: -1;
     transform: scale(0);
