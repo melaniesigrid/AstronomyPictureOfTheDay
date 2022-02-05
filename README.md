@@ -4,6 +4,7 @@
 
 > A beautiful website that utilizes NASA's API, Astronomy Picture of the Day. You can like your favorite pictures, and comment about your favorites (likes and comments powered by Microverse's Involvement API).
 
+<img src="./app.gif" width="100%">
 
 ## Built With
 
@@ -13,7 +14,7 @@
 - NASA's Astronomy Picture of the Day
 - Microverse's Involvement API
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://livedemo.com)
 
