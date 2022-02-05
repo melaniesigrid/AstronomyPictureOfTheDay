@@ -1,0 +1,271 @@
+@font-face {
+  font-family: "Nasalization";
+  src: url(./assets/nasalization-cufonfonts-webfont/nasalization\ rg.woff);
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url(./assets/Helvetica-Font/Helvetica.ttf) format("truetype");
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto auto;
+  grid-template-areas:
+    "top-decoration"
+    "header"
+    "main"
+    "footer"
+    "bottom-decoration";
+  border: 4px solid #be9ce7;
+  border-radius: 15px;
+  background-color: #18161e;
+}
+
+.browser {
+  grid-area: top-decoration;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-bottom: 4px solid #be9ce7;
+}
+
+.web-title {
+  font-family: "Nasalization", sans-serif;
+  font-size: 2.7rem;
+  margin-top: 1vh;
+  margin-bottom: 0;
+  color: #eb3f5e;
+}
+
+.browser-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.browser-navigation img {
+  width: auto;
+  height: 43px;
+}
+
+.address-bar {
+  text-align: left;
+  box-sizing: border-box;
+  margin-bottom: 1vh;
+  padding: 8px;
+  width: 60vw;
+  height: 40px;
+  border: 4px solid #be9ce7;
+  background-color: #18161e;
+  color: #be9ce7;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+#address {
+  margin: 0;
+}
+
+header {
+  background-color: transparent;
+  grid-area: header;
+  padding: 5px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  grid-area: main;
+  overflow-y: auto;
+  margin: 0 5vw;
+}
+
+.title {
+  text-align: center;
+  font-family: "Nasalization", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 3vw;
+}
+
+.title-link {
+  text-decoration: none;
+}
+
+.title-link:hover {
+  color: #be9ce7;
+  cursor: pointer;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid white;
+  border-radius: 15px;
+  width: 25vw;
+  margin-bottom: 8vh;
+}
+
+.card:hover {
+  border-color: #be9ce7;
+}
+
+.picture {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-top: 5vh;
+}
+
+.picture:hover {
+  cursor: pointer;
+}
+
+.video {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 15px;
+  margin-top: 5vh;
+}
+
+.title-container {
+  width: 18vw;
+  text-align: center;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 1.4rem;
+}
+
+.card-title:hover {
+  color: #be9ce7;
+  cursor: pointer;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 18vw;
+  margin-bottom: 3vh;
+}
+
+.likes-container {
+  display: flex;
+  align-items: center;
+}
+
+.comment-btn {
+  color: white;
+  background-color: #1b1a27;
+  border: 3px solid white;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.comment-btn:hover {
+  color: #be9ce7;
+  border-color: #be9ce7;
+  cursor: pointer;
+}
+
+.fa-heart {
+  margin-right: 15px;
+  font-size: 1.3rem;
+}
+
+.fa-heart:hover {
+  cursor: pointer;
+  color: #eb3f5e;
+}
+
+footer {
+  grid-area: footer;
+  border: 3px solid #be9ce7;
+  height: 50px;
+  margin: 15px 20px 15px 20px;
+  padding-left: 20px;
+  background-color: #1b1a27;
+}
+
+.bottom-decoration {
+  text-align: right;
+  grid-area: bottom-decoration;
+  border-top: 3px solid #be9ce7;
+}
+
+.bottom-decoration > .bars {
+  font-size: 1.9rem;
+  padding-right: 10px;
+  margin: 3px;
+}
+
+@media screen and (max-width: 1200px) {
+  .browser-navigation img {
+    display: none;
+  }
+}
+
+* {
+  color: #ddd;
+}
+
+section {
+  margin-bottom: 200px;
+}
+
+header i {
+  color: #f59259;
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 30px;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #be9ce7;
+}
+
+.active-tab {
+  color: rgb(255, 208, 0);
+}
