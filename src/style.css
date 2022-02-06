@@ -33,7 +33,7 @@ a {
     "footer"
     "bottom-decoration";
   border: 4px solid #be9ce7;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: #18161e;
 }
 
@@ -48,8 +48,7 @@ a {
 .web-title {
   font-family: "Nasalization", sans-serif;
   font-size: 2.7rem;
-  margin-top: 1vh;
-  margin-bottom: 0;
+  margin: 0 0;
   color: #eb3f5e;
 }
 
@@ -85,12 +84,15 @@ a {
 }
 
 header {
-  background-color: transparent;
+  background-color: #1b1a27;
   grid-area: header;
-  padding: 5px 80px;
+  margin: 15px 20px;
+  padding: 5px 0 5px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 3px solid #be9ce7;
+  border-radius: 10px;
 }
 
 .content {
@@ -125,19 +127,34 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid white;
+  border: 3px solid #d6c7e9;
   border-radius: 15px;
   width: 25vw;
   margin-bottom: 8vh;
+  animation-name: out;
+  transition: ease-in-out 0.4s;
 }
 
 .card:hover {
-  border-color: #be9ce7;
+  border-color: #a87fda;
+  transform: scale(1.05);
+  transition: ease-in-out 0.4s;
+  animation-name: in;
+}
+
+@keyframes in {
+  from {transform: scale(1);}
+  to {transform: scale(1.02);}
+}
+
+@keyframes out {
+  from {transform: scale(1.05);}
+  to {transform: scale(1);}
 }
 
 .picture {
   width: 20vw;
-  height: 20vw;
+  height: 15vw;
   border-radius: 15px;
   object-fit: cover;
   margin-top: 5vh;
@@ -149,7 +166,7 @@ header {
 
 .video {
   width: 20vw;
-  height: 20vw;
+  height: 15vw;
   border-radius: 15px;
   margin-top: 5vh;
 }
@@ -200,11 +217,11 @@ header {
 .fa-heart {
   margin-right: 15px;
   font-size: 1.3rem;
+  color: #eb3f5e;
 }
 
 .fa-heart:hover {
   cursor: pointer;
-  color: #eb3f5e;
 }
 
 footer {
@@ -214,6 +231,7 @@ footer {
   margin: 15px 20px 15px 20px;
   padding-left: 20px;
   background-color: #1b1a27;
+  border-radius: 10px;
 }
 
 .bottom-decoration {
@@ -222,7 +240,7 @@ footer {
   border-top: 3px solid #be9ce7;
 }
 
-.bottom-decoration > .bars {
+.bottom-decoration>.bars {
   font-size: 1.9rem;
   padding-right: 10px;
   margin: 3px;
@@ -240,11 +258,6 @@ footer {
 
 section {
   margin-bottom: 200px;
-}
-
-header i {
-  color: #f59259;
-  font-size: 2rem;
 }
 
 header p {
