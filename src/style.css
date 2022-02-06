@@ -38,8 +38,7 @@ a {
     "top-decoration"
     "header"
     "main"
-    "footer"
-    "bottom-decoration";
+    "footer";
   border: 4px solid var(--light-violet);
   background-color: var(--dark-background);
 }
@@ -52,19 +51,12 @@ a {
   border-bottom: 4px solid var(--light-violet);
 }
 
-.web-title {
-  font-family: "Nasalization", sans-serif;
-  font-size: 2.7rem;
-  margin: 0 0;
-  color: var(--custom-red);
-}
-
 .browser-navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 0 30px;
+  padding: 1.5vh 30px;
 }
 
 .browser-navigation img {
@@ -100,6 +92,13 @@ header {
   align-items: center;
   border: 3px solid var(--light-violet);
   border-radius: 10px;
+}
+
+.web-title {
+  font-family: "Nasalization", sans-serif;
+  font-size: 2.7rem;
+  margin: 0 0;
+  color: var(--custom-red);
 }
 
 .content {
@@ -241,18 +240,6 @@ footer {
   border-radius: 10px;
 }
 
-.bottom-decoration {
-  text-align: right;
-  grid-area: bottom-decoration;
-  border-top: 3px solid var(--light-violet);
-}
-
-.bottom-decoration>.bars {
-  font-size: 1.9rem;
-  padding-right: 10px;
-  margin: 3px;
-}
-
 @media screen and (max-width: 1200px) {
   .browser-navigation img {
     display: none;
@@ -264,7 +251,7 @@ footer {
 }
 
 section {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 header p {
