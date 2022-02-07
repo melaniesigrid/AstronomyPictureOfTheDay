@@ -9,6 +9,7 @@
   opacity: 0;
   animation: hide 0.25s;
   transform: scale(0);
+  backdrop-filter: blur(10px) !important;
 }
 
 @keyframes hide {
