@@ -4,20 +4,23 @@
 
 > A beautiful website that utilizes NASA's API, Astronomy Picture of the Day. You can like your favorite pictures, and comment about your favorites (likes and comments powered by Microverse's Involvement API).
 
-https://user-images.githubusercontent.com/78875455/152620387-5f63ef5e-2443-4eb9-b96e-62b824095578.mp4
+https://user-images.githubusercontent.com/78875455/152668745-d15e8a01-24fd-4355-8952-f387c3cb4eff.mp4
 
 ## Built With
 
+- JavaScript
+- Webpack
 - HTML
 - CSS
-- Webpack
-- NASA's Astronomy Picture of the Day
+- NASA's Astronomy Picture of the Day API
 - Microverse's Involvement API
 
 ## Live Demo
 
 [Live Demo Link](https://melaniesigrid.github.io/AstronomyPictureOfTheDay/dist/)
-<br>
+
+## Live Video
+
 [Live video Link](https://youtu.be/kCXQTR1wQN4)
 
 ## Authors
@@ -46,7 +49,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to NASA for their amazing open source API, and to code reviewers and partners at Microverse.
+- Hat tip to NASA for their amazing open source API, and to our code reviewers and partners at Microverse.
 
 ## 📝 License
 
