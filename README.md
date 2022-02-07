@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Astronomy Picture of the Day
+# 🚀 Astronomy Picture of the Day
 
 > A beautiful website that utilizes NASA's API, Astronomy Picture of the Day. You can like your favorite pictures, and comment about your favorites (likes and comments powered by Microverse's Involvement API).
 
@@ -15,7 +15,7 @@ https://user-images.githubusercontent.com/78875455/152668745-d15e8a01-24fd-4355-
 - NASA's Astronomy Picture of the Day API
 - Microverse's Involvement API
 
-## Live Demo
+## 🧑‍🚀 Live Demo
 
 [Live Demo Link](https://melaniesigrid.github.io/AstronomyPictureOfTheDay/dist/)
 
@@ -23,7 +23,7 @@ https://user-images.githubusercontent.com/78875455/152668745-d15e8a01-24fd-4355-
 
 [Live video Link](https://youtu.be/kCXQTR1wQN4)
 
-## Authors
+## 👽 Authors
 
 👤 **Ibrohim Rasulov**
 
@@ -49,7 +49,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to NASA for their amazing open source API, and to our code reviewers and partners at Microverse.
+- Hat tip to our Microverse partner, [@carloshs1994](https://github.com/carloshs1994). To NASA for their amazing open source API, and to the rest of our code reviewers and partners at Microverse.
 
 ## 📝 License
 
