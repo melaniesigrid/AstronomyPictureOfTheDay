@@ -149,13 +149,13 @@ header {
 }
 
 @keyframes in {
-  from {transform: scale(1);}
-  to {transform: scale(1.02);}
+  from { transform: scale(1) };
+  to { transform: scale(1.02) };
 }
 
 @keyframes out {
-  from {transform: scale(1.05);}
-  to {transform: scale(1);}
+  from { transform: scale(1.05) };
+  to { transform: scale(1) };
 }
 
 .picture {
