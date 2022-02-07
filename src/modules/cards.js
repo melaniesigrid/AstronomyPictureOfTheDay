@@ -63,6 +63,7 @@ const createCards = async () => {
     love.addEventListener('click', async () => {
       await postLike(`picture-${i}`);
       likeNumber();
+      love.classList.add('hearted');
     });
 
     likeNumber();

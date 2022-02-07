@@ -1,7 +1,7 @@
 const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
 const key = 'j9gWflgyCduUULTGmKMfahoaNAbzAULMkGGuu9jN';
-const startDate = '2022-01-28';
-const endDate = '2022-02-05';
+const startDate = '2022-01-27';
+const endDate = '2022-02-07';
 const url = `${baseUrl}${key}&start_date=${startDate}&end_date=${endDate}`;
 
 const getPictures = async () => {

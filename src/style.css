@@ -223,11 +223,16 @@ header {
 .fa-heart {
   margin-right: 15px;
   font-size: 1.3rem;
-  color: var(--custom-red);
+  color: white;
 }
 
 .fa-heart:hover {
   cursor: pointer;
+  color: var(--custom-red);
+}
+
+.hearted {
+  color: var(--custom-red);
 }
 
 footer {
