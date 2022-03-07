@@ -281,3 +281,105 @@ a:hover {
 .active-tab {
   color: rgb(255, 208, 0);
 }
+
+@media screen and (max-width: 1100px) {
+  .card {
+    margin-bottom: 5vh;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .web-title {
+    font-size: 1.8rem;
+  }
+
+  .title-container {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .title {
+    font-size: 1.9rem;
+  }
+
+  .card {
+    width: 38vw;
+  }
+
+  .picture {
+    width: 25vw;
+    height: 20vw;
+    margin-top: 3vh;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    height: 5vw;
+  }
+
+  .likes-container {
+    font-size: 0.9rem;
+  }
+
+  .comment-btn {
+    font-size: 0.9rem;
+  }
+
+  .card-title {
+    height: 10vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title-container {
+    justify-content: space-around;
+  }
+
+  .item-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .web-title {
+    font-size: 1.3rem;
+  }
+
+  nav ul li {
+    font-size: 0.7rem;;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  header {
+    padding: 0 10px 0 10px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .title-container {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .likes-container {
+    height: 15vw;
+  }
+}
